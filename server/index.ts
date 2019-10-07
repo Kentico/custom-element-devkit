@@ -1,3 +1,4 @@
+//importing all the requirements
 import { Stats } from 'webpack';
 import {
   prettyPrint,
@@ -19,9 +20,9 @@ import {
 } from './src/build/customElementInfo';
 import { setupServer } from './src/serverSetup';
 import { once } from '../common/utils/once';
-
+//Setting up the server
 const setupServerOnce = once(setupServer);
-
+//Rectifying Compilation 
 const logCompiledEntryPoint = (stats: Stats): void => {
   console.log('\n\nCompiled successfully: ');
   stats.compilation.entrypoints.forEach(entry => {
@@ -29,12 +30,12 @@ const logCompiledEntryPoint = (stats: Stats): void => {
     console.log(`${chunk.name}: ${prettyString(chunk.files)}`);
   });
 };
-
+//Checking Compilation errors
 const logCompilationErrors = (stats: Stats): void => {
   console.log('\n\nCompilation failed:\n\n');
   console.log((typeof stats.toJson === 'function') ? stats.toJson('errors-only') : stats);
 };
-
+//Building output of the Compilation
 const buildOnceAndOutput = async (customElementsInformation: ReadonlyArray<CustomElementInformation>, args: CmdArguments) => {
   try {
     const info = await buildOnce(customElementsInformation, { minify: args.minify });
@@ -61,7 +62,7 @@ const setupWatcher = async (customElementsInformation: ReadonlyArray<CustomEleme
     },
     { minify: args.minify });
 };
-
+//Compilation into HTML
 const compileToHTML = async (customElementsInformation: ReadonlyArray<CustomElementInformation>, args: CmdArguments) => {
   await buildOnceAndOutput(customElementsInformation, args);
   try {
@@ -73,7 +74,7 @@ const compileToHTML = async (customElementsInformation: ReadonlyArray<CustomElem
   }
 };
 
-
+//The main function
 async function main() {
   const args = getArguments(process.argv);
   reportArgConflicts(args);
