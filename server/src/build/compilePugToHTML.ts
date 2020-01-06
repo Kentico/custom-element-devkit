@@ -21,7 +21,7 @@ const safeRequire = (modulePath) => {
 
 export const getRenderArgs = (elementInfo: CustomElementInformation, buildArgs: ICompilationArgs, mockCustomElementApi: boolean = false): IPugTemplateRenderArgs => {
   const renderArgs: IPugTemplateRenderArgs = {
-    customElementApiScriptSrc: mockCustomElementApi ? '/custom-elements/custom-element-api-mock/bundle.js' : 'https://app.kenticocloud.com/js-api/custom-element.js',
+    customElementApiScriptSrc: mockCustomElementApi ? '/custom-elements/custom-element-api-mock/bundle.js' : 'https://app.kenticocloud.com/js-api/custom-element/v1/custom-element.min.js',
   };
   if (buildArgs.inlineJs) {
     const script = fs.readFileSync(elementInfo.scriptFilePath).toString();
