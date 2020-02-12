@@ -1,8 +1,12 @@
-# Development Kit for Custom Elements in Kentico Cloud
+# ARCHIVED - Development Kit for Custom Elements in Kentico Cloud
 
-[![Build Status](https://api.travis-ci.com/Kentico/custom-element-devkit.svg?branch=master)](https://travis-ci.com/Kentico/custom-element-devkit)
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+<!--[![Build Status](https://api.travis-ci.com/Kentico/custom-element-devkit.svg?branch=master)](https://travis-ci.com/Kentico/custom-element-devkit)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b164a3ac97987595ddf4/maintainability)](https://codeclimate.com/github/Kentico/custom-element-devkit/maintainability)
-[![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-cloud)
+[![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-kontent)-->
+
+> <h2 align="center">:warning:<br><br>Archive Notice</h2>
+> This repository is no longer being maintained for compatibility with the latest version of the product. Examples in this repository refer to the previous product name, <strong>Kentico Cloud</strong>, rather than the new product name, <strong>Kentico Kontent</strong>.
 
 This repository contains several custom content elements for the [Kentico Cloud](https://kenticocloud.com/) platform.
 
